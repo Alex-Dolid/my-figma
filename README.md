@@ -1,2 +1,2 @@
-# my-figma
+# My-Figma
 My variant Figma
