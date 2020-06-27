@@ -1,0 +1,24 @@
+$assetPath: "../../assets/fonts/Gilroy/";
+
+@mixin font-face($name, $file, $weight: normal, $style: normal) {
+  @font-face {
+    font-family: "#{$name}";
+    src: url("#{$file}.woff") format("woff"),
+    url("#{$file}.eot?#iefix") format("embedded-opentype"),
+    url("#{$file}.woff") format("woff"),
+    url("#{$file}.eot"),
+    url("#{$file}.ttf") format("truetype");
+    font-weight: $weight;
+    font-style: $style;
+  }
+}
+
+@include font-face("Gilroy", $assetPath + "Gilroy-ExtraBold", 800);
+@include font-face("Gilroy", $assetPath + "Gilroy-SemiBold", 600);
+@include font-face("Gilroy", $assetPath + "Gilroy-Light", 300);
+@include font-face("Gilroy", $assetPath + "Gilroy-Regular", normal);
+@include font-face("Gilroy", $assetPath + "Gilroy-Medium", 500);
+@include font-face("Gilroy", $assetPath + "Gilroy-Bold", bold);
+
+
+
