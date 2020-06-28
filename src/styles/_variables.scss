@@ -1,0 +1,16 @@
+$extra-black: #000;
+$extra-white: #fff;
+$silver: #9F9F9F;
+$primary-black: #404040;
+$primary-grey: #A6A6A6;
+$light-grey: #D9D9D9;
+$primary-blue: #18A0FB;
+// RESOLUTIONS
+
+$desktopWidth: 1280px;
+$fullWidth: 1440px;
+$fullHDWidth: 1920px;
+
+$desktop: "max-width: "+($desktopWidth - 1);
+$full: "max-width: "+($fullWidth - 1);
+$fullHD: "max-width: "+($fullHDWidth - 1);

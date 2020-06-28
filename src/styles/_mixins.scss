@@ -1,0 +1,62 @@
+// Usage:
+//
+//   @include flex[(keywords)];
+//
+// Keywords:
+//
+//   [wrap | column | center* | flex-start* | flex-end* | stretch | baseline | space-around | space-between]
+//
+// * If only one of these keywords is present, it's used for both justify-content and align-items.
+//   When two keywords are present the first goes in justify-content (main axis) and the other in align-items (perpendicular axis).
+//
+// Examples:
+//
+//   @include flex;
+//
+//     display: flex;
+//
+//   @include flex(column wrap);
+//
+//     display: flex;
+//     flex-direction: column;
+//     flex-wrap: wrap;
+//
+//   @include flex(center);
+//
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//
+//   @include flex(flex-end flex-start);
+//
+//     display: flex;
+//     justify-content: flex-end;
+//     align-items: flex-start;
+//
+@mixin flex($params: null) {
+  display: flex;
+  $justify-content: null;
+  $align-items: null;
+  @each $value in $params {
+    @if $value == "wrap" {
+      flex-wrap: wrap;
+    } @else if $value == "column" {
+      flex-direction: column;
+    } @else if index(space-between space-around, $value) {
+      $justify-content: $value;
+    } @else if index(baseline stretch, $value) {
+      $align-items: $value;
+    } @else if index(flex-start center flex-end, $value) {
+      @if $justify-content {
+        $align-items: $value;
+      } @else {
+        $justify-content: $value;
+        @if not $align-items {
+          $align-items: $value;
+        }
+      }
+    }
+  }
+  justify-content: $justify-content;
+  align-items: $align-items;
+}

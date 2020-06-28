@@ -1,0 +1,11 @@
+@import "src/styles/variables";
+
+.editor-top-bar {
+  position: fixed;
+  top: 0;
+  left: 50px;
+  width: calc(100% - 300px - 50px);
+  height: 50px;
+  background: $primary-black;
+  box-shadow: 0 4px 4px rgba($extra-black, 0.25);
+}
