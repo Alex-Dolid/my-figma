@@ -9,12 +9,8 @@ import Tab from "../../reusable/Tabs/Tab";
 const EditorRightSideBar: FC = () => (
   <div className="editor-right-side-bar">
     <Tabs headTitles={["Design", "Prototype"]}>
-      <Tab>
-        Tab1
-      </Tab>
-      <Tab>
-        Tab2
-      </Tab>
+      <Tab>Tab1</Tab>
+      <Tab>Tab2</Tab>
     </Tabs>
   </div>
 );

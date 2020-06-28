@@ -3,7 +3,8 @@ import React, {
   CSSProperties,
   FC,
   ReactElement,
-  ReactNode, useCallback,
+  ReactNode,
+  useCallback,
 } from "react";
 // Styles
 import "./index.scss";
@@ -14,7 +15,7 @@ type PropTypes = {
   style?: CSSProperties;
   onClick?: Function;
   children: ReactNode;
-  argsForOnClick: unknown[];
+  argsForOnClick?: unknown[];
 };
 
 const Typography: FC<PropTypes> = ({
@@ -23,9 +24,12 @@ const Typography: FC<PropTypes> = ({
   style,
   onClick,
   children,
-  argsForOnClick
+  argsForOnClick = [],
 }: PropTypes): ReactElement => {
-  const onclick = useCallback((): void => onClick && onClick(...argsForOnClick), [onClick, argsForOnClick]);
+  const onclick = useCallback(
+    (): void => onClick && onClick(...argsForOnClick),
+    [onClick, argsForOnClick]
+  );
   return (
     // eslint-disable-next-line @typescript-eslint/ban-ts-ignore
     // @ts-ignore

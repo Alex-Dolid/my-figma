@@ -7,13 +7,15 @@ type PropTypes = {
   isActive?: boolean;
   className?: string;
   children: ReactNode;
-}
+};
 
-const Tab: FC<PropTypes> = ({ isActive = false, className = "", children }: PropTypes): ReactElement => (
+const Tab: FC<PropTypes> = ({
+  isActive = false,
+  className = "",
+  children,
+}: PropTypes): ReactElement => (
   <div className={classNames("tabs__tab", { [className]: isActive })}>
-    {
-      isActive && children
-    }
+    {isActive && children}
   </div>
 );
 

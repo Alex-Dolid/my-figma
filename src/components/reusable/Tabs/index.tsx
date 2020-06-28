@@ -1,5 +1,11 @@
 // Core
-import React, {FC, ReactElement, useEffect, useState, useCallback} from "react";
+import React, {
+  FC,
+  ReactElement,
+  useEffect,
+  useState,
+  useCallback,
+} from "react";
 // Libs
 import classNames from "classnames";
 // Styles
@@ -38,7 +44,9 @@ const Tabs: FC<PropTypes> = ({
           {headTitles.map((title, index) => (
             <Typography
               Tag="span"
-              className={classNames("tabs__title", { "tabs__title_active": index === activeTabIndex})}
+              className={classNames("tabs__title", {
+                tabs__title_active: index === activeTabIndex,
+              })}
               key={getUniqueKey()}
               argsForOnClick={[index]}
               onClick={callbackByActiveTab}
