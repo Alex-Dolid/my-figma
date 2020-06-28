@@ -1,5 +1,31 @@
 @import "src/styles/variables";
 
 .tabs {
+  &__head {
+    height: 50px;
+  }
 
+  &__titles {
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: $light-grey;
+  }
+
+  &__title {
+    cursor: default;
+
+    &_active {
+      color: $extra-white;
+    }
+
+    &:hover {
+      color: $extra-white;
+    }
+  }
+
+  &__tab {
+
+  }
 }
