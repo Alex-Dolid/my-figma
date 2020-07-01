@@ -1,24 +1,32 @@
-$assetPath: "../../assets/fonts/Gilroy/";
+$assetPath: "../../assets/fonts/Montserrat/";
 
 @mixin font-face($name, $file, $weight: normal, $style: normal) {
   @font-face {
     font-family: "#{$name}";
-    src: url("#{$file}.woff") format("woff"),
-    url("#{$file}.eot?#iefix") format("embedded-opentype"),
-    url("#{$file}.woff") format("woff"),
-    url("#{$file}.eot"),
-    url("#{$file}.ttf") format("truetype");
+    src: url("#{$file}.woff2") format("woff2"),
+    url("#{$file}.woff2") format("woff2"),
+    url("#{$file}.woff") format("woff");
     font-weight: $weight;
     font-style: $style;
   }
 }
 
-@include font-face("Gilroy", $assetPath + "Gilroy-ExtraBold", 800);
-@include font-face("Gilroy", $assetPath + "Gilroy-SemiBold", 600);
-@include font-face("Gilroy", $assetPath + "Gilroy-Light", 300);
-@include font-face("Gilroy", $assetPath + "Gilroy-Regular", normal);
-@include font-face("Gilroy", $assetPath + "Gilroy-Medium", 500);
-@include font-face("Gilroy", $assetPath + "Gilroy-Bold", bold);
+@include font-face("Montserrat", $assetPath + "Montserrat-ExtraBold", 800);
+@include font-face("Montserrat", $assetPath + "Montserrat-SemiBold", 600);
+@include font-face("Montserrat", $assetPath + "Montserrat-Light", 300);
+@include font-face("Montserrat", $assetPath + "Montserrat-Regular", normal);
+@include font-face("Montserrat", $assetPath + "Montserrat-Medium", 500);
+@include font-face("Montserrat", $assetPath + "Montserrat-Bold", bold);
 
+/*@font-face {
+  font-family: "Montserrat";
+  src: url("../../assets/fonts/Montserrat/Montserrat-Regular.ttf") format("truetype"),
+  //url("../../assets/fonts/Montserrat/Montserrat-Regular.eot?#iefix") format("embedded-opentype"),
+  //url("../../assets/fonts/Montserrat/Montserrat-Regular.woff") format("woff"),
+  url("../../assets/fonts/Montserrat/Montserrat-Regular.ttf") format("truetype");
+  //url("../../assets/fonts/Montserrat/Montserrat-Regular.eot"),
+  font-weight: normal;
+  font-style: normal;
+}*/
 
 

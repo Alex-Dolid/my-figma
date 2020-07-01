@@ -21,6 +21,9 @@
         "extensions": [".tsx"]
       }
     ],
+    "react/button-has-type": 0,
+    "react/prop-types": 0,
+    "@typescript-eslint/interface-name-prefix": 0,
     "linebreak-style": 0,
     "function-paren-newline": 0,
     "implicit-arrow-linebreak": 0,

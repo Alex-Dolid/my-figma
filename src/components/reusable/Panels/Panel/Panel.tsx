@@ -16,10 +16,12 @@ const Panel: FC<PropTypes> = ({
   className = "",
   style,
   children,
-  title = ""
+  title = "",
 }: PropTypes): ReactElement => (
   <div className={`panel ${className}`} style={style}>
-    <Typography Tag="h6" className="panel__title">{title}</Typography>
+    <Typography Tag="h6" className="panel__title">
+      {title}
+    </Typography>
     {children}
   </div>
 );
