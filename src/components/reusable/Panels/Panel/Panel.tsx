@@ -18,7 +18,7 @@ const Panel: FC<PropTypes> = ({
   style,
   children,
   title = "",
-  isWrapperBody = false
+  isWrapperBody = false,
 }: PropTypes): ReactElement => (
   <div className={`panel ${className}`} style={style}>
     <Typography Tag="h6" className="panel__title">

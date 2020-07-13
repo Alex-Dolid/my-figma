@@ -1,5 +1,10 @@
 // Core
-import { ChangeEvent, CSSProperties, MouseEventHandler, ReactNode } from "react";
+import {
+  ChangeEvent,
+  CSSProperties,
+  MouseEventHandler,
+  ReactNode,
+} from "react";
 
 export type FillActionType<T> = (
   payload: T

@@ -14,7 +14,7 @@ const Input: FC<InputType & ReactElementDefaultType> = ({
   onChange,
   placeholder,
   value,
-  className = ""
+  className = "",
 }: InputType & ReactElementDefaultType): ReactElement => (
   <input
     className={`input ${className}`}

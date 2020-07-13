@@ -37,7 +37,7 @@ const icons: TIcons = {
   iconAlignPositionVerticalCenters: IconAlignPositionVerticalCenters,
   // PositionGroupIcons
   iconRotate: IconRotate,
-  iconBorderRadius: IconBorderRadius
+  iconBorderRadius: IconBorderRadius,
 };
 
 interface IIconProps {

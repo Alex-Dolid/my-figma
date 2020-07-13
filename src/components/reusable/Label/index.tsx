@@ -11,8 +11,15 @@ type PropTypes = {
   className?: string;
 };
 
-const Label: FC<ReactElementDefaultType & PropTypes> = ({ htmlFor, children, className, ...props }: ReactElementDefaultType & PropTypes): ReactElement => (
-  <label {...props} htmlFor={htmlFor} className={`label ${className}`}>{children}</label>
+const Label: FC<ReactElementDefaultType & PropTypes> = ({
+  htmlFor,
+  children,
+  className,
+  ...props
+}: ReactElementDefaultType & PropTypes): ReactElement => (
+  <label {...props} htmlFor={htmlFor} className={`label ${className}`}>
+    {children}
+  </label>
 );
 
 export default Label;
