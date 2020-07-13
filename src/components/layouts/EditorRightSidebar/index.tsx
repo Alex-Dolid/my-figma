@@ -6,12 +6,14 @@ import "./index.scss";
 import Tabs from "../../reusable/Tabs";
 import Tab from "../../reusable/Tabs/Tab";
 import AlignPositionPanel from "../../reusable/Panels/DesignPanels/AlignPositionPanel";
+import PositionGroupPanel from "../../reusable/Panels/DesignPanels/PositionGroupPanel";
 
 const EditorRightSideBar: FC = () => (
   <div className="editor-right-side-bar">
     <Tabs headTitles={["Design", "Prototype"]}>
       <Tab>
         <AlignPositionPanel />
+        <PositionGroupPanel />
       </Tab>
       <Tab>Tab2</Tab>
     </Tabs>

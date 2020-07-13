@@ -1,0 +1,10 @@
+@import "src/styles/variables";
+
+.input {
+  color: $light-grey;
+  border-radius: 2px;
+  cursor: default;
+  background-clip: padding-box;
+  background-color: transparent;
+  width: 100%;
+}

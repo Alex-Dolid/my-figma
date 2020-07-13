@@ -18,15 +18,4 @@ $assetPath: "../../assets/fonts/Montserrat/";
 @include font-face("Montserrat", $assetPath + "Montserrat-Medium", 500);
 @include font-face("Montserrat", $assetPath + "Montserrat-Bold", bold);
 
-/*@font-face {
-  font-family: "Montserrat";
-  src: url("../../assets/fonts/Montserrat/Montserrat-Regular.ttf") format("truetype"),
-  //url("../../assets/fonts/Montserrat/Montserrat-Regular.eot?#iefix") format("embedded-opentype"),
-  //url("../../assets/fonts/Montserrat/Montserrat-Regular.woff") format("woff"),
-  url("../../assets/fonts/Montserrat/Montserrat-Regular.ttf") format("truetype");
-  //url("../../assets/fonts/Montserrat/Montserrat-Regular.eot"),
-  font-weight: normal;
-  font-style: normal;
-}*/
-
 

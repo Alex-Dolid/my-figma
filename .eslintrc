@@ -21,6 +21,7 @@
         "extensions": [".tsx"]
       }
     ],
+    "import/namespace": 0,
     "react/button-has-type": 0,
     "react/prop-types": 0,
     "@typescript-eslint/interface-name-prefix": 0,

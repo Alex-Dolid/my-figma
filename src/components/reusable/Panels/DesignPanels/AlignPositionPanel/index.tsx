@@ -20,7 +20,7 @@ const arrNameIcons: Array<IconName> = [
 const AlignPositionPanel = (): ReactElement => (
   <Panel className="align-position-panel">
     {arrNameIcons.map((name) => (
-      <Button type="button">
+      <Button type="button" key={name}>
         <Icon name={name} />
       </Button>
     ))}

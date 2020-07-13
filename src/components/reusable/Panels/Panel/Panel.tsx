@@ -10,6 +10,7 @@ type PropTypes = {
   className?: string;
   style?: CSSProperties;
   title?: string;
+  isWrapperBody?: boolean;
 };
 
 const Panel: FC<PropTypes> = ({
@@ -17,12 +18,13 @@ const Panel: FC<PropTypes> = ({
   style,
   children,
   title = "",
+  isWrapperBody = false
 }: PropTypes): ReactElement => (
   <div className={`panel ${className}`} style={style}>
     <Typography Tag="h6" className="panel__title">
       {title}
     </Typography>
-    {children}
+    {isWrapperBody ? <div className="panel__body">{children}</div> : children}
   </div>
 );
 
