@@ -21,13 +21,13 @@ const InputGroup: FC<InputType & PropTypes> = ({
   return (
     <div className="input-group">
       {isLabel && (
-        <Label htmlFor={inputProps.name} className="input-group__label">
+        <Label htmlFor={inputProps.id} className="input-group__label">
           {label}
         </Label>
       )}
       <Input
         {...inputProps}
-        id={inputProps.name}
+        id={inputProps.id}
         className="input-group__input"
       />
     </div>

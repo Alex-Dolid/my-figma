@@ -22,10 +22,10 @@ export type ErrorActionType = (
 };
 
 export type InputType = {
-  id?: string;
-  name: string;
+  id: string;
+  name?: string;
   type: string;
-  value: string;
+  value?: string;
   onChange: (e: ChangeEvent<HTMLInputElement>) => void;
   isDisabled?: boolean;
   placeholder?: string;

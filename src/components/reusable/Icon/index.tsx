@@ -1,6 +1,8 @@
 // Core
-import React, { memo, useMemo, FC } from "react";
+import React, { memo, useMemo, FC, CSSProperties } from "react";
 // Assets
+// Commons
+import { ReactComponent as IconAccordionArrow } from "../../../assets/icons/accordion-arrow-icon.svg";
 // AlignPositionsIcons
 import { ReactComponent as IconAlignPositionBottom } from "../../../assets/icons/alignPositionIcons/align-bottom.svg";
 import { ReactComponent as IconAlignPositionHorizontalCenters } from "../../../assets/icons/alignPositionIcons/align-horizontal-centers.svg";
@@ -12,6 +14,10 @@ import { ReactComponent as IconAlignPositionVerticalCenters } from "../../../ass
 // PositionGroupIcons
 import { ReactComponent as IconRotate } from "../../../assets/icons/rotate-icon.svg";
 import { ReactComponent as IconBorderRadius } from "../../../assets/icons/border-radius-icon.svg";
+// ConstraintsIcons
+import { ReactComponent as IconConstraints } from "../../../assets/icons/constraintsIcons/constraints-icon.svg";
+import { ReactComponent as IconReverseArrowHorizontal } from "../../../assets/icons/constraintsIcons/reverse-arrow-horisontal-icon.svg";
+import { ReactComponent as IconReverseArrowVertical } from "../../../assets/icons/constraintsIcons/reverse-arrow-vertical-icon.svg";
 
 export type IconName =
   | "iconAlignPositionBottom"
@@ -22,11 +28,17 @@ export type IconName =
   | "iconAlignPositionTop"
   | "iconAlignPositionVerticalCenters"
   | "iconRotate"
-  | "iconBorderRadius";
+  | "iconBorderRadius"
+  | "iconConstraints"
+  | "iconReverseArrowHorizontal"
+  | "iconReverseArrowVertical"
+  | "iconAccordionArrow";
 
 type TIcons = { [key in IconName]: FC };
 
 const icons: TIcons = {
+  // Commons
+  iconAccordionArrow: IconAccordionArrow,
   // AlignPositionIcons
   iconAlignPositionBottom: IconAlignPositionBottom,
   iconAlignPositionHorizontalCenters: IconAlignPositionHorizontalCenters,
@@ -38,20 +50,30 @@ const icons: TIcons = {
   // PositionGroupIcons
   iconRotate: IconRotate,
   iconBorderRadius: IconBorderRadius,
+  // ConstraintsIcons
+  iconConstraints: IconConstraints,
+  iconReverseArrowHorizontal: IconReverseArrowHorizontal,
+  iconReverseArrowVertical: IconReverseArrowVertical
 };
 
 interface IIconProps {
   name: IconName;
+  className?: string;
+  width?: string;
+  height?: string;
+  style?: CSSProperties;
 }
 
-const Icon: FC<IIconProps> = ({ name, ...props }) => {
+const Icon: FC<IIconProps> = ({ name, ...props }: IIconProps) => {
   const IconElement = useMemo(() => icons[name], [name]);
 
   if (!IconElement) {
     console.warn(`Icon "${name}" does not exist.`);
     return null;
   }
-
+  // TODO
+  // eslint-disable-next-line @typescript-eslint/ban-ts-ignore
+  // @ts-ignore
   return <IconElement {...props} />;
 };
 

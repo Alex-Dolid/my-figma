@@ -19,7 +19,7 @@ const PositionGroupPanel = (): ReactElement => {
       {arrLetters.map((letter) => (
         <InputGroup
           key={letter}
-          name={`${letter}-group`}
+          id={`${letter}-group`}
           type="string"
           value="100"
           onChange={onChange}
@@ -30,7 +30,7 @@ const PositionGroupPanel = (): ReactElement => {
       {arrNameIcons.map((name) => (
         <InputGroup
           key={name}
-          name={`${name}-group`}
+          id={`${name}-group`}
           type="string"
           value="100"
           onChange={onChange}

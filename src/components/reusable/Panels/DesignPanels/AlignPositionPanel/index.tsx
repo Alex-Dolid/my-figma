@@ -5,7 +5,7 @@ import "./index.scss";
 // Components
 import Panel from "../../Panel/Panel";
 import Icon, { IconName } from "../../../Icon";
-import Button from "../../../../layouts/Button";
+import Button from "../../../Button";
 
 const arrNameIcons: Array<IconName> = [
   "iconAlignPositionBottom",
