@@ -3,6 +3,7 @@ import React, { memo, useMemo, FC, CSSProperties } from "react";
 // Assets
 // Commons
 import { ReactComponent as IconAccordionArrow } from "../../../assets/icons/accordion-arrow-icon.svg";
+import { ReactComponent as IconEye } from "../../../assets/icons/eye-icon.svg";
 // AlignPositionsIcons
 import { ReactComponent as IconAlignPositionBottom } from "../../../assets/icons/alignPositionIcons/align-bottom.svg";
 import { ReactComponent as IconAlignPositionHorizontalCenters } from "../../../assets/icons/alignPositionIcons/align-horizontal-centers.svg";
@@ -18,6 +19,8 @@ import { ReactComponent as IconBorderRadius } from "../../../assets/icons/border
 import { ReactComponent as IconConstraints } from "../../../assets/icons/constraintsIcons/constraints-icon.svg";
 import { ReactComponent as IconReverseArrowHorizontal } from "../../../assets/icons/constraintsIcons/reverse-arrow-horisontal-icon.svg";
 import { ReactComponent as IconReverseArrowVertical } from "../../../assets/icons/constraintsIcons/reverse-arrow-vertical-icon.svg";
+// LayersIcons
+import { ReactComponent as IconWaterdrop } from "../../../assets/icons/layersIcons/waterdrop-icon.svg";
 
 export type IconName =
   | "iconAlignPositionBottom"
@@ -32,13 +35,16 @@ export type IconName =
   | "iconConstraints"
   | "iconReverseArrowHorizontal"
   | "iconReverseArrowVertical"
-  | "iconAccordionArrow";
+  | "iconAccordionArrow"
+  | "iconWaterdrop"
+  | "iconEye";
 
 type TIcons = { [key in IconName]: FC };
 
 const icons: TIcons = {
   // Commons
   iconAccordionArrow: IconAccordionArrow,
+  iconEye: IconEye,
   // AlignPositionIcons
   iconAlignPositionBottom: IconAlignPositionBottom,
   iconAlignPositionHorizontalCenters: IconAlignPositionHorizontalCenters,
@@ -53,7 +59,9 @@ const icons: TIcons = {
   // ConstraintsIcons
   iconConstraints: IconConstraints,
   iconReverseArrowHorizontal: IconReverseArrowHorizontal,
-  iconReverseArrowVertical: IconReverseArrowVertical
+  iconReverseArrowVertical: IconReverseArrowVertical,
+  // LayersIcons
+  iconWaterdrop: IconWaterdrop
 };
 
 interface IIconProps {

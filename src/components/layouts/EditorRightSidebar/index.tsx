@@ -8,6 +8,7 @@ import Tab from "../../reusable/Tabs/Tab";
 import AlignPositionPanel from "../../reusable/Panels/DesignPanels/AlignPositionPanel";
 import PositionGroupPanel from "../../reusable/Panels/DesignPanels/PositionGroupPanel";
 import ConstraintsPanel from "../../reusable/Panels/DesignPanels/ConstraintsPanel";
+import LayersPanel from "../../reusable/Panels/DesignPanels/LayersPanel";
 
 const EditorRightSideBar: FC = () => (
   <div className="editor-right-side-bar">
@@ -16,6 +17,7 @@ const EditorRightSideBar: FC = () => (
         <AlignPositionPanel />
         <PositionGroupPanel />
         <ConstraintsPanel />
+        <LayersPanel />
       </Tab>
       <Tab>Tab2</Tab>
     </Tabs>

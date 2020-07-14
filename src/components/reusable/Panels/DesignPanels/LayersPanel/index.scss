@@ -1,0 +1,39 @@
+@import "src/styles/variables";
+
+.layers-panel {
+  .panel {
+    &__body {
+      margin-top: 16px;
+      flex-wrap: nowrap;
+    }
+  }
+
+  .select {
+    &__bottom {
+      .select__option {
+        padding: 0 30px;
+      }
+    }
+  }
+
+  &__input {
+    padding: 0 10px;
+    margin: 0 20px;
+    width: 80px;
+
+    border: 1px solid transparent;
+    border-radius: 3px;
+
+    &:hover {
+      border: 0.5px solid $silver;
+    }
+
+    &:focus-within {
+      border: 0.5px solid $primary-blue;
+    }
+  }
+
+  &__button {
+    margin-right: 20px;
+  }
+}

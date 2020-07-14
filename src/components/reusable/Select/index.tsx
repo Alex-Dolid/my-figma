@@ -23,6 +23,7 @@ type PropsTypes = {
   iconNameRight?: IconName;
   isMarkerLeft?: boolean;
   iconNameLeft?: IconName;
+  className?: string;
 };
 
 const Select: FC<PropsTypes> = ({
@@ -32,7 +33,8 @@ const Select: FC<PropsTypes> = ({
   onChange,
   iconNameRight = "iconAccordionArrow",
   isMarkerLeft = false,
-  iconNameLeft = "iconAccordionArrow"
+  iconNameLeft = "iconAccordionArrow",
+  className = ""
 }: PropsTypes): ReactElement => {
   const selectedOption = useMemo(() => options.find((option) => option.value === value), [options, value]);
   const [isOpen, setIsOpen] = useState(false);
@@ -50,7 +52,7 @@ const Select: FC<PropsTypes> = ({
   }, [toggleIsOpen, onChange]);
 
   return (
-    <div className="select">
+    <div className={`select ${className}`}>
       <div className="select__top" onClick={toggleIsOpen}>
         {
           isMarkerLeft ? (
