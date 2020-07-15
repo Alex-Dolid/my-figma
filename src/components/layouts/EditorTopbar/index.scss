@@ -12,4 +12,72 @@
 
   animation: fadeInDown;
   animation-duration: 1.5s;
+
+  display: flex;
+  align-items: center;
+
+  &__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 100%;
+
+    border-radius: 0;
+
+    &:nth-child(2) {
+      svg {
+        width: 80%;
+      }
+    }
+
+    &:hover {
+      background-color: $black-hover;
+    }
+
+    svg {
+      width: 60%;
+      height: 100%;
+    }
+  }
+
+  &__select {
+    height: 100%;
+    padding: 0;
+    //padding: 9px 0;
+    width: 60px !important;
+
+    .select {
+      &__top {
+        height: 100%;
+        padding: 0;
+      }
+
+      &__value {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        padding: 0;
+      }
+
+      &__bottom {
+        width: 60px;
+        height: auto;
+        top: 45px;
+
+        .select__option {
+          display: flex;
+          justify-content: center;
+          padding: 0;
+          min-width: 60px;
+        }
+      }
+    }
+
+    &:hover {
+      border: 1px solid transparent !important;
+      background-color: $black-hover;
+    }
+  }
 }
