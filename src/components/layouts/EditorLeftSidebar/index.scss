@@ -4,12 +4,17 @@
   position: fixed;
   left: 0;
   bottom: 0;
-  width: 50px;
+  width: 15px;
   height: calc(100% - 50px);
   background: $primary-black;
   box-shadow: 0 4px 4px rgba($extra-black, 0.25);
   overflow-y: auto;
+  transition: width 0.5s ease-in-out;
 
   animation: fadeInLeft;
   animation-duration: 1.5s;
+
+  &:hover {
+    width: 230px;
+  }
 }
