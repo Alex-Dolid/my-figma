@@ -25,7 +25,7 @@ const Panel: FC<PropTypes> = ({
   topButtons
 }: PropTypes): ReactElement => (
   <div className={`panel ${className}`} style={style}>
-    <div className="panel__top">
+    <div className="panel__top" style={{ display: !title ? "none" : "flex" }}>
       <Typography Tag="h6" className="panel__title">
         {title}
       </Typography>
