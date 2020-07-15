@@ -22,9 +22,11 @@ const useOnClickOutside = (
       const listener = (event: PossibleEvent): void => {
         // Do nothing if clicking ref's element or descendent elements
         if (!ref.current || ref.current.contains(event.target as Node)) {
-          return;
+          return undefined;
+        } else {
+          handler(event);
         }
-        handler(event);
+        return undefined;
       };
 
       document.addEventListener("mousedown", listener);

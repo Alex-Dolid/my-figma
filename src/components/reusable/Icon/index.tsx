@@ -6,6 +6,7 @@ import { ReactComponent as IconAccordionArrow } from "../../../assets/icons/acco
 import { ReactComponent as IconEye } from "../../../assets/icons/eye-icon.svg";
 import { ReactComponent as IconPlus } from "../../../assets/icons/plus-icon.svg";
 import { ReactComponent as IconMinus } from "../../../assets/icons/minus-icon.svg";
+import { ReactComponent as IconBurger } from "../../../assets/icons/burger-icon.svg";
 // AlignPositionsIcons
 import { ReactComponent as IconAlignPositionBottom } from "../../../assets/icons/alignPositionIcons/align-bottom.svg";
 import { ReactComponent as IconAlignPositionHorizontalCenters } from "../../../assets/icons/alignPositionIcons/align-horizontal-centers.svg";
@@ -23,6 +24,12 @@ import { ReactComponent as IconReverseArrowHorizontal } from "../../../assets/ic
 import { ReactComponent as IconReverseArrowVertical } from "../../../assets/icons/constraintsIcons/reverse-arrow-vertical-icon.svg";
 // LayersIcons
 import { ReactComponent as IconWaterdrop } from "../../../assets/icons/layersIcons/waterdrop-icon.svg";
+// ControlsIcon
+import { ReactComponent as IconCursorDefault } from "../../../assets/icons/controlsIcons/cursor-default-icon.svg";
+import { ReactComponent as IconRectangle } from "../../../assets/icons/controlsIcons/rectangle-icon.svg";
+import { ReactComponent as IconPencil } from "../../../assets/icons/controlsIcons/pencil-icon.svg";
+import { ReactComponent as IconText } from "../../../assets/icons/controlsIcons/text-icon.svg";
+import { ReactComponent as IconComments } from "../../../assets/icons/controlsIcons/comments-icon.svg";
 
 export type IconName =
   | "iconAlignPositionBottom"
@@ -41,7 +48,13 @@ export type IconName =
   | "iconWaterdrop"
   | "iconEye"
   | "iconPlus"
-  | "iconMinus";
+  | "iconMinus"
+  | "iconBurger"
+  | "iconCursorDefault"
+  | "iconRectangle"
+  | "iconPencil"
+  | "iconText"
+  | "iconComments";
 
 type TIcons = { [key in IconName]: FC };
 
@@ -51,6 +64,7 @@ const icons: TIcons = {
   iconEye: IconEye,
   iconPlus: IconPlus,
   iconMinus: IconMinus,
+  iconBurger: IconBurger,
   // AlignPositionIcons
   iconAlignPositionBottom: IconAlignPositionBottom,
   iconAlignPositionHorizontalCenters: IconAlignPositionHorizontalCenters,
@@ -68,6 +82,12 @@ const icons: TIcons = {
   iconReverseArrowVertical: IconReverseArrowVertical,
   // LayersIcons
   iconWaterdrop: IconWaterdrop,
+  // ControlsIcons
+  iconComments: IconComments,
+  iconCursorDefault: IconCursorDefault,
+  iconPencil: IconPencil,
+  iconRectangle: IconRectangle,
+  iconText: IconText
 };
 
 interface IIconProps {

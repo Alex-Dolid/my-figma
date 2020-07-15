@@ -1,7 +1,7 @@
 // Core
 import React, {
   FC,
-  ReactElement,
+  ReactElement, ReactNode,
   useCallback,
   useMemo,
   useRef,
@@ -19,7 +19,7 @@ import useOnClickOutside from "../../../hooks/useOnClickOutside";
 
 type OptionObjType = {
   value: string;
-  label: string;
+  label: string | ReactNode;
 };
 
 type PropsTypes = {
@@ -65,7 +65,7 @@ const Select: FC<PropsTypes> = ({
   );
 
   return (
-    <div className={`select ${className}`}>
+    <div className={`select ${className}`} ref={selectRef}>
       <div className="select__top" onClick={toggleIsOpen}>
         {isMarkerLeft ? (
           <Icon

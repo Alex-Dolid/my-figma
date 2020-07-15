@@ -21,6 +21,7 @@
         "extensions": [".tsx"]
       }
     ],
+    "no-else-return": 0,
     "no-trailing-spaces": 0,
     "operator-linebreak": 0,
     "jsx-a11y/click-events-have-key-events": 0,
