@@ -8,13 +8,13 @@ import Icon, { IconName } from "../../../Icon";
 import Button from "../../../Button";
 
 const arrNameIcons: Array<IconName> = [
-  "iconAlignPositionBottom",
-  "iconAlignPositionHorizontalCenters",
   "iconAlignPositionLeft",
-  "iconAlignPositionMoreOptions",
+  "iconAlignPositionHorizontalCenters",
   "iconAlignPositionRight",
   "iconAlignPositionTop",
   "iconAlignPositionVerticalCenters",
+  "iconAlignPositionBottom",
+  "iconAlignPositionMoreOptions",
 ];
 
 const AlignPositionPanel = (): ReactElement => (
