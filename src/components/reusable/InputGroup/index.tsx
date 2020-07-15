@@ -28,7 +28,7 @@ const InputGroup: FC<InputType & PropTypes> = ({
       <Input
         {...inputProps}
         id={inputProps.id}
-        className="input-group__input"
+        className={`input-group__input input-group__input_${inputProps.type}`}
       />
     </div>
   );

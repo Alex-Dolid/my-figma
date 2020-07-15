@@ -8,10 +8,21 @@
     border-bottom: 1px solid $black;
   }
 
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__top-buttons {
+    margin-right: 20px;
+  }
+
   &__title {
     color: $light-grey;
     font-size: 0.75rem;
     line-height: 0.9375rem;
+    font-weight: 500;
   }
 
   &__body {

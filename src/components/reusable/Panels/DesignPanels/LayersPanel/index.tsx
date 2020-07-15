@@ -1,5 +1,5 @@
 // Core
-import React from "react";
+import React, { ReactElement } from "react";
 // Styles
 import "./index.scss";
 // Components
@@ -9,7 +9,7 @@ import Input from "../../../Input";
 import Icon from "../../../Icon";
 import Button from "../../../Button";
 
-const LayersPanel = () => {
+const LayersPanel = (): ReactElement => {
   return (
     <Panel className="layers-panel" title="Layers" isWrapperBody>
       <Select

@@ -17,7 +17,7 @@ const Input: FC<InputType & ReactElementDefaultType> = ({
   className = "",
 }: InputType & ReactElementDefaultType): ReactElement => (
   <input
-    className={`input ${className}`}
+    className={`input input_${type} ${className}`}
     id={id}
     type={type}
     name={name}

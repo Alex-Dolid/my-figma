@@ -4,6 +4,8 @@ import React, { memo, useMemo, FC, CSSProperties } from "react";
 // Commons
 import { ReactComponent as IconAccordionArrow } from "../../../assets/icons/accordion-arrow-icon.svg";
 import { ReactComponent as IconEye } from "../../../assets/icons/eye-icon.svg";
+import { ReactComponent as IconPlus } from "../../../assets/icons/plus-icon.svg";
+import { ReactComponent as IconMinus } from "../../../assets/icons/minus-icon.svg";
 // AlignPositionsIcons
 import { ReactComponent as IconAlignPositionBottom } from "../../../assets/icons/alignPositionIcons/align-bottom.svg";
 import { ReactComponent as IconAlignPositionHorizontalCenters } from "../../../assets/icons/alignPositionIcons/align-horizontal-centers.svg";
@@ -37,7 +39,9 @@ export type IconName =
   | "iconReverseArrowVertical"
   | "iconAccordionArrow"
   | "iconWaterdrop"
-  | "iconEye";
+  | "iconEye"
+  | "iconPlus"
+  | "iconMinus";
 
 type TIcons = { [key in IconName]: FC };
 
@@ -45,6 +49,8 @@ const icons: TIcons = {
   // Commons
   iconAccordionArrow: IconAccordionArrow,
   iconEye: IconEye,
+  iconPlus: IconPlus,
+  iconMinus: IconMinus,
   // AlignPositionIcons
   iconAlignPositionBottom: IconAlignPositionBottom,
   iconAlignPositionHorizontalCenters: IconAlignPositionHorizontalCenters,
