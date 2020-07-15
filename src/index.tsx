@@ -2,7 +2,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 // Styles
-import "./index.css";
+import "./index.scss";
 // import { App } from "./App";
 import Main from "./components/layouts/Main";
 import * as serviceWorker from "./serviceWorker";

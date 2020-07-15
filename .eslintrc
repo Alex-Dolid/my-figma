@@ -21,6 +21,16 @@
         "extensions": [".tsx"]
       }
     ],
+    "no-trailing-spaces": 0,
+    "operator-linebreak": 0,
+    "jsx-a11y/click-events-have-key-events": 0,
+    "jsx-a11y/no-static-element-interactions": 0,
+    "quote-props": 0,
+    "import/namespace": 0,
+    "react/button-has-type": 0,
+    "react/prop-types": 0,
+    "@typescript-eslint/interface-name-prefix": 0,
+    "linebreak-style": 0,
     "function-paren-newline": 0,
     "implicit-arrow-linebreak": 0,
     "object-curly-newline": 0,

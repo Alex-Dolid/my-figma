@@ -15,7 +15,7 @@ type PropTypes = {
   style?: CSSProperties;
   onClick?: Function;
   children: ReactNode;
-  argsForOnClick: unknown[];
+  argsForOnClick?: unknown[];
 };
 
 const Typography: FC<PropTypes> = ({
@@ -24,7 +24,7 @@ const Typography: FC<PropTypes> = ({
   style,
   onClick,
   children,
-  argsForOnClick,
+  argsForOnClick = [],
 }: PropTypes): ReactElement => {
   const onclick = useCallback(
     (): void => onClick && onClick(...argsForOnClick),

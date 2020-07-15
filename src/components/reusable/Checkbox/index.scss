@@ -1,0 +1,47 @@
+@import "src/styles/variables";
+
+.checkbox {
+  display: none;
+
+  &-label {
+    display: flex;
+    align-items: center;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 14px;
+    color: $light-grey;
+    text-transform: initial;
+    padding-bottom: 0;
+
+    &_disabled {
+
+    }
+  }
+
+  &-label:before {
+    content: " ";
+    color: $light-grey;
+    display: inline-block;
+    font-size: 12px;
+    line-height: 13px;
+    font-weight: bold;
+    margin-right: 15px;
+    position: relative;
+    text-align: center;
+    text-indent: 0;
+    width: 13px;
+    height: 13px;
+    background: $primary-black;
+    border: 1px solid $light-grey;
+    vertical-align: middle;
+  }
+
+  &:checked + &-label:before {
+    background-color: $primary-blue;
+    border: none;
+    outline: none;
+    color: white;
+    content: "✓";
+    border-radius: 2px;
+  }
+}

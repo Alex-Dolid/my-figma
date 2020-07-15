@@ -1,0 +1,11 @@
+@import "src/styles/variables";
+
+.position-group-panel {
+
+  .input-group {
+    margin-top: 15px;
+    &:nth-child(-n + 2) {
+      margin-top: 10px;
+    }
+  }
+}

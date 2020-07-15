@@ -1,0 +1,66 @@
+@import "src/styles/variables";
+
+.fill-panel {
+
+  &__color-input-group {
+    display: flex;
+    border: 1px solid transparent;
+
+    &:hover {
+      border: 0.5px solid $silver;
+      .fill-panel__input {
+        border-left: 0.5px solid $silver;
+      }
+    }
+
+    &:focus-within {
+      border: 0.5px solid $primary-blue;
+
+      .fill-panel__input {
+        border-left: 0.5px solid $silver;
+      }
+    }
+  }
+
+
+
+
+  .panel {
+    &__body {
+      margin-top: 16px;
+      flex-wrap: nowrap;
+    }
+  }
+
+  .select {
+    &__bottom {
+      .select__option {
+        padding: 0 30px;
+      }
+    }
+  }
+
+  &__input {
+    padding: 0 10px;
+    margin: 0;
+    width: 60px;
+    border-left: 0.5px solid transparent;
+
+    border-radius: 3px;
+
+    &:hover {
+
+    }
+  }
+
+  &__button {
+    &:first-child {
+      margin-right: 10px;
+    }
+
+    &:last-child {
+      margin-right: 20px;
+    }
+
+  }
+}
