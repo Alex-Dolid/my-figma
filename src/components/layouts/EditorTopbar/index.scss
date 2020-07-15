@@ -9,4 +9,7 @@
   background: $primary-black;
   box-shadow: 0 4px 4px rgba($extra-black, 0.2);
   z-index: 100;
+
+  animation: fadeInDown;
+  animation-duration: 1.5s;
 }
