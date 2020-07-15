@@ -13,9 +13,11 @@ const LayersPanel = (): ReactElement => {
   return (
     <Panel className="layers-panel" title="Layers" isWrapperBody>
       <Select
-        options={[{value: "left", label: "left"}, {value: "right", label: "right"}]}
-        onChange={() => {
-        }}
+        options={[
+          { value: "left", label: "left" },
+          { value: "right", label: "right" },
+        ]}
+        onChange={() => {}}
         isMarkerLeft
         iconNameLeft="iconWaterdrop"
         value="left"

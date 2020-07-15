@@ -1,5 +1,12 @@
 // Core
-import React, { FC, ReactElement, useCallback, useMemo, useRef, useState } from "react";
+import React, {
+  FC,
+  ReactElement,
+  useCallback,
+  useMemo,
+  useRef,
+  useState,
+} from "react";
 // Libs
 import classNames from "classnames";
 // Styles
@@ -13,7 +20,7 @@ import useOnClickOutside from "../../../hooks/useOnClickOutside";
 type OptionObjType = {
   value: string;
   label: string;
-}
+};
 
 type PropsTypes = {
   value?: string;
@@ -34,9 +41,12 @@ const Select: FC<PropsTypes> = ({
   iconNameRight = "iconAccordionArrow",
   isMarkerLeft = false,
   iconNameLeft = "iconAccordionArrow",
-  className = ""
+  className = "",
 }: PropsTypes): ReactElement => {
-  const selectedOption = useMemo(() => options.find((option) => option.value === value), [options, value]);
+  const selectedOption = useMemo(
+    () => options.find((option) => option.value === value),
+    [options, value]
+  );
   const [isOpen, setIsOpen] = useState(false);
   const selectRef = useRef(null);
 
@@ -46,60 +56,59 @@ const Select: FC<PropsTypes> = ({
     setIsOpen(!isOpen);
   }, [isOpen]);
 
-  const handleClickOption = useCallback((_value) => {
-    toggleIsOpen();
-    onChange(_value);
-  }, [toggleIsOpen, onChange]);
+  const handleClickOption = useCallback(
+    (_value) => {
+      toggleIsOpen();
+      onChange(_value);
+    },
+    [toggleIsOpen, onChange]
+  );
 
   return (
     <div className={`select ${className}`}>
       <div className="select__top" onClick={toggleIsOpen}>
-        {
-          isMarkerLeft ? (
-            <Icon
-              className="select__marker"
-              name={iconNameLeft}
-              style={{
-                order: -1,
-                minWidth: 7,
-                minHeight: 9,
-                marginRight: iconNameLeft === "iconReverseArrowVertical" ? 20 : 15,
-                marginLeft: iconNameLeft === "iconReverseArrowVertical" ? 3 : 0,
-              }}
-            />
-          )
-            :
-            null
-        }
-        <div className="select__value">{selectedOption ? selectedOption.label : placeholder}</div>
+        {isMarkerLeft ? (
+          <Icon
+            className="select__marker"
+            name={iconNameLeft}
+            style={{
+              order: -1,
+              minWidth: 7,
+              minHeight: 9,
+              marginRight:
+                iconNameLeft === "iconReverseArrowVertical" ? 20 : 15,
+              marginLeft: iconNameLeft === "iconReverseArrowVertical" ? 3 : 0,
+            }}
+          />
+        ) : null}
+        <div className="select__value">
+          {selectedOption ? selectedOption.label : placeholder}
+        </div>
         <Icon
-          className={classNames("select__marker", { "select__marker_inverted": isOpen })}
+          className={classNames("select__marker", {
+            select__marker_inverted: isOpen,
+          })}
           name={iconNameRight}
           style={{ minWidth: 15 }}
         />
       </div>
-      {
-        isOpen &&
-        (
-          <div className="select__bottom">
-            <div className="select__options">
-              {
-                options.map((option) => (
-                  <React.Fragment key={option.value}>
-                    <Option
-                      selected={selectedOption?.value === option.value}
-                      onClick={handleClickOption}
-                      value={option.value}
-                    >
-                      {option.label}
-                    </Option>
-                  </React.Fragment>
-                ))
-              }
-            </div>
+      {isOpen && (
+        <div className="select__bottom">
+          <div className="select__options">
+            {options.map((option) => (
+              <React.Fragment key={option.value}>
+                <Option
+                  selected={selectedOption?.value === option.value}
+                  onClick={handleClickOption}
+                  value={option.value}
+                >
+                  {option.label}
+                </Option>
+              </React.Fragment>
+            ))}
           </div>
-        )
-      }
+        </div>
+      )}
     </div>
   );
 };

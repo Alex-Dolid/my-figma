@@ -1,5 +1,11 @@
 // Core
-import React, { ChangeEvent, CSSProperties, FC, ReactElement, ReactNode } from "react";
+import React, {
+  ChangeEvent,
+  CSSProperties,
+  FC,
+  ReactElement,
+  ReactNode,
+} from "react";
 // Libs
 import classNames from "classnames";
 // Styles
@@ -25,13 +31,21 @@ const Checkbox: FC<PropsTypes> = ({
   onClick,
   children,
   style,
-  isDisabled = false
+  isDisabled = false,
 }: PropsTypes): ReactElement => (
   <>
-    <input type="checkbox" className={classNames("checkbox", className)} id={id} checked={checked} onChange={onClick} />
+    <input
+      type="checkbox"
+      className={classNames("checkbox", className)}
+      id={id}
+      checked={checked}
+      onChange={onClick}
+    />
     <Label
       htmlFor={id}
-      className={classNames("checkbox-label", className, { "checkbox-label_disabled": isDisabled })}
+      className={classNames("checkbox-label", className, {
+        "checkbox-label_disabled": isDisabled,
+      })}
       style={style}
     >
       {children}

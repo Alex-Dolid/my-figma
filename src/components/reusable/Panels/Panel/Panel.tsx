@@ -22,7 +22,7 @@ const Panel: FC<PropTypes> = ({
   children,
   title = "",
   isWrapperBody = false,
-  topButtons
+  topButtons,
 }: PropTypes): ReactElement => (
   <div className={`panel ${className}`} style={style}>
     <div className="panel__top" style={{ display: !title ? "none" : "flex" }}>
@@ -30,13 +30,12 @@ const Panel: FC<PropTypes> = ({
         {title}
       </Typography>
       <div className="panel__top-buttons">
-        {
-          topButtons && topButtons.map((iconName) => (
+        {topButtons &&
+          topButtons.map((iconName) => (
             <Button type="button" key={iconName}>
               <Icon name={iconName} />
             </Button>
-          ))
-        }
+          ))}
       </div>
     </div>
     {isWrapperBody ? <div className="panel__body">{children}</div> : children}

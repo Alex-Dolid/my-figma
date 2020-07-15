@@ -3,17 +3,20 @@ import { RefObject, useEffect } from "react";
 const MOUSEDOWN = "mousedown";
 const TOUCHSTART = "touchstart";
 
-type HandledEvents = [typeof MOUSEDOWN, typeof TOUCHSTART]
+type HandledEvents = [typeof MOUSEDOWN, typeof TOUCHSTART];
 
-type HandledEventsType = HandledEvents[number]
+type HandledEventsType = HandledEvents[number];
 
 type PossibleEvent = {
-  [Type in HandledEventsType]: HTMLElementEventMap[Type]
+  [Type in HandledEventsType]: HTMLElementEventMap[Type];
 }[HandledEventsType];
 
-type Handler = (event: PossibleEvent) => void
+type Handler = (event: PossibleEvent) => void;
 
-const useOnClickOutside = (ref: RefObject<HTMLElement>, handler: Handler): void => {
+const useOnClickOutside = (
+  ref: RefObject<HTMLElement>,
+  handler: Handler
+): void => {
   useEffect(
     () => {
       const listener = (event: PossibleEvent): void => {

@@ -8,27 +8,34 @@ import Panel from "../../Panel/Panel";
 import Select from "../../../Select";
 import Checkbox from "../../../Checkbox";
 
-const arrNameIcons: Array<IconName> = ["iconConstraints", "iconReverseArrowHorizontal", "iconReverseArrowVertical"];
+const arrNameIcons: Array<IconName> = [
+  "iconConstraints",
+  "iconReverseArrowHorizontal",
+  "iconReverseArrowVertical",
+];
 
 const ConstraintsPanel = (): ReactElement => {
   return (
     <Panel className="constraints-panel" title="Constraints" isWrapperBody>
-      {arrNameIcons.map((name, i) => (
+      {arrNameIcons.map((name, i) =>
         i === 0 ? <Icon key={name} name={name} /> : null
-      ))}
+      )}
       <div className="constraints-panel__selects">
-        {arrNameIcons.map((name, i) => (
+        {arrNameIcons.map((name, i) =>
           i !== 0 ? (
             <Select
               key={name}
-              options={[{ value: "left", label: "left" }, { value: "right", label: "right" }]}
+              options={[
+                { value: "left", label: "left" },
+                { value: "right", label: "right" },
+              ]}
               onChange={() => {}}
               isMarkerLeft
               iconNameLeft={name}
               value="left"
             />
           ) : null
-        ))}
+        )}
       </div>
       <Checkbox
         id="constraints-checkbox"

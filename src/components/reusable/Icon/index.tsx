@@ -67,7 +67,7 @@ const icons: TIcons = {
   iconReverseArrowHorizontal: IconReverseArrowHorizontal,
   iconReverseArrowVertical: IconReverseArrowVertical,
   // LayersIcons
-  iconWaterdrop: IconWaterdrop
+  iconWaterdrop: IconWaterdrop,
 };
 
 interface IIconProps {
