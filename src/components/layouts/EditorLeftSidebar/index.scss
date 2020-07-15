@@ -3,8 +3,10 @@
 .editor-left-side-bar {
   position: fixed;
   left: 0;
+  bottom: 0;
   width: 50px;
-  height: 100%;
+  height: calc(100% - 50px);
   background: $primary-black;
   box-shadow: 0 4px 4px rgba($extra-black, 0.25);
+  overflow-y: auto;
 }
