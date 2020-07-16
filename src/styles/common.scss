@@ -69,6 +69,13 @@ body,
   &:hover {
     background-color: $black-hover;
   }
+
+  &_active {
+    background-color: $primary-blue;
+    svg {
+      fill: $extra-white ;
+    }
+  }
 }
 
 input {

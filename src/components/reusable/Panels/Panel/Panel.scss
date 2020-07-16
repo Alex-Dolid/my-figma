@@ -12,6 +12,14 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    &:hover {
+      cursor: default;
+
+      .panel__title {
+        color: $extra-white;
+      }
+    }
   }
 
   &__top-buttons {

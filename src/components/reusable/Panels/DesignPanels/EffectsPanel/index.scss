@@ -1,0 +1,42 @@
+@import "src/styles/variables";
+
+.effects-panel {
+  position: relative;
+  .panel {
+    &__body {
+      margin-top: 16px;
+      flex-wrap: wrap;
+    }
+  }
+
+  .select {
+    &__bottom {
+      .select__option {
+        padding: 0 10px;
+      }
+    }
+  }
+
+  &__button {
+    &:first-child {
+      margin-right: 10px;
+    }
+
+    &:nth-child(3) {
+      margin-right: 10px;
+    }
+
+    &:last-child {
+      margin-right: 20px;
+    }
+
+  }
+
+  &__select {
+    width: 140px;
+  }
+
+  .mt {
+    margin-top: 10px;
+  }
+}

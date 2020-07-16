@@ -1,0 +1,46 @@
+@import "src/styles/variables";
+
+.shadow-modal {
+  position: absolute;
+  background-color: $primary-black;
+  top: 0;
+  height: 100px;
+  width: 250px;
+  z-index: 10000;
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 52px;
+    border-bottom: 1px solid $black;
+  }
+
+  &__title {
+    margin-left: 25px;
+    color: $light-grey;
+    font-size: 0.75rem;
+    line-height: 0.9375rem;
+  }
+
+  &__button {
+    margin-right: 10px;
+
+    svg {
+      width: 15px;
+      height: 15px;
+    }
+
+    &:not(:last-child) {
+      margin-left: auto;
+    }
+
+    &_close {
+      margin-right: 15px;
+      svg {
+
+        transform: rotate(45deg);
+      }
+    }
+  }
+}

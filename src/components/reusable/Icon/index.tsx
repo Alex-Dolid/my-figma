@@ -33,6 +33,8 @@ import { ReactComponent as IconText } from "../../../assets/icons/controlsIcons/
 import { ReactComponent as IconComments } from "../../../assets/icons/controlsIcons/comments-icon.svg";
 // StrokeIcons
 import { ReactComponent as IconWidthStroke } from "../../../assets/icons/strokeIcons/width-stroke-icon.svg";
+// EffectsIcons
+import { ReactComponent as IconSun } from "../../../assets/icons/effectsIcons/sun-icon.svg";
 
 export type IconName =
   | "iconAlignPositionBottom"
@@ -59,7 +61,8 @@ export type IconName =
   | "iconText"
   | "iconComments"
   | "iconWidthStroke"
-  | "iconThreeDots";
+  | "iconThreeDots"
+  | "iconSun";
 
 type TIcons = { [key in IconName]: FC };
 
@@ -96,6 +99,8 @@ const icons: TIcons = {
   iconText: IconText,
   // StrokeIcons
   iconWidthStroke: IconWidthStroke,
+  // EffectsIcons
+  iconSun: IconSun,
 };
 
 interface IIconProps {
