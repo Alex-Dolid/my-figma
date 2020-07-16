@@ -1,6 +1,6 @@
 @import "src/styles/variables";
 
-.fill-panel {
+.stroke-panel {
 
   &__color-input-group {
     display: flex;
@@ -20,12 +20,13 @@
         border-left: 0.5px solid $silver;
       }
     }
+
   }
 
   .panel {
     &__body {
       margin-top: 16px;
-      flex-wrap: nowrap;
+      flex-wrap: wrap;
     }
   }
 
@@ -55,9 +56,20 @@
       margin-right: 10px;
     }
 
-    &:last-child {
+    &:nth-child(3) {
       margin-right: 20px;
     }
+    &:last-child {
+      margin-right: 18px;
+    }
 
+  }
+
+  &__select {
+    width: 100px;
+  }
+
+  .mt {
+    margin-top: 10px;
   }
 }

@@ -7,6 +7,7 @@ import { ReactComponent as IconEye } from "../../../assets/icons/eye-icon.svg";
 import { ReactComponent as IconPlus } from "../../../assets/icons/plus-icon.svg";
 import { ReactComponent as IconMinus } from "../../../assets/icons/minus-icon.svg";
 import { ReactComponent as IconBurger } from "../../../assets/icons/burger-icon.svg";
+import { ReactComponent as IconThreeDots } from "../../../assets/icons/three-dots-icon.svg";
 // AlignPositionsIcons
 import { ReactComponent as IconAlignPositionBottom } from "../../../assets/icons/alignPositionIcons/align-bottom.svg";
 import { ReactComponent as IconAlignPositionHorizontalCenters } from "../../../assets/icons/alignPositionIcons/align-horizontal-centers.svg";
@@ -30,6 +31,8 @@ import { ReactComponent as IconRectangle } from "../../../assets/icons/controlsI
 import { ReactComponent as IconPencil } from "../../../assets/icons/controlsIcons/pencil-icon.svg";
 import { ReactComponent as IconText } from "../../../assets/icons/controlsIcons/text-icon.svg";
 import { ReactComponent as IconComments } from "../../../assets/icons/controlsIcons/comments-icon.svg";
+// StrokeIcons
+import { ReactComponent as IconWidthStroke } from "../../../assets/icons/strokeIcons/width-stroke-icon.svg";
 
 export type IconName =
   | "iconAlignPositionBottom"
@@ -54,7 +57,9 @@ export type IconName =
   | "iconRectangle"
   | "iconPencil"
   | "iconText"
-  | "iconComments";
+  | "iconComments"
+  | "iconWidthStroke"
+  | "iconThreeDots";
 
 type TIcons = { [key in IconName]: FC };
 
@@ -65,6 +70,7 @@ const icons: TIcons = {
   iconPlus: IconPlus,
   iconMinus: IconMinus,
   iconBurger: IconBurger,
+  iconThreeDots: IconThreeDots,
   // AlignPositionIcons
   iconAlignPositionBottom: IconAlignPositionBottom,
   iconAlignPositionHorizontalCenters: IconAlignPositionHorizontalCenters,
@@ -87,7 +93,9 @@ const icons: TIcons = {
   iconCursorDefault: IconCursorDefault,
   iconPencil: IconPencil,
   iconRectangle: IconRectangle,
-  iconText: IconText
+  iconText: IconText,
+  // StrokeIcons
+  iconWidthStroke: IconWidthStroke,
 };
 
 interface IIconProps {
