@@ -10,6 +10,7 @@ import Panel from "../../Panel/Panel";
 import Select from "../../../Select";
 // Modals
 import ShadowModal from "../../../../modals/ShadowModal";
+import BlurModal from "../../../../modals/BlurModal";
 
 const EffectsPanel = (): ReactElement => {
 
@@ -47,6 +48,7 @@ const EffectsPanel = (): ReactElement => {
               </Button>
               {portal(
                 <ShadowModal coords={modalCoords} closePortal={closePortal}/>
+                // <BlurModal coords={modalCoords} closePortal={closePortal}/>
               )}
             </>
           );

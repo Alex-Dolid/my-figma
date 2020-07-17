@@ -1,6 +1,6 @@
 @import "src/styles/variables";
 
-.shadow-modal {
+.blur-modal {
   position: absolute;
   background-color: $primary-black;
   top: 0;
@@ -36,8 +36,8 @@
 
     &_close {
       margin-right: 15px;
-      svg {
 
+      svg {
         transform: rotate(45deg);
       }
     }
@@ -47,52 +47,18 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    padding: 12px 30px 12px 15px;
+    padding: 12px 25px;
 
     .input-group {
       width: 100px;
 
-      &:not(:nth-child(-n + 2)) {
-        margin-top: 10px;
+      &:first-child {
+        margin-right: 10px;
       }
 
       &__label {
         text-transform: capitalize;
       }
-    }
-  }
-
-  &__color-input-group {
-    margin-top: 10px;
-    display: flex;
-    border: 1px solid transparent;
-
-    &:hover {
-      border: 0.5px solid $silver;
-      .shadow-modal__input {
-        border-left: 0.5px solid $silver;
-      }
-    }
-
-    &:focus-within {
-      border: 0.5px solid $primary-blue;
-
-      .shadow-modal__input {
-        border-left: 0.5px solid $silver;
-      }
-    }
-  }
-
-  &__input {
-    padding: 0 10px;
-    margin: 0;
-    width: 60px;
-    border-left: 0.5px solid transparent;
-
-    border-radius: 3px;
-
-    &:hover {
-
     }
   }
 }
