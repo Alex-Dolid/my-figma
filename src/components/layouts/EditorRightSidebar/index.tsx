@@ -12,6 +12,7 @@ import LayersPanel from "../../reusable/Panels/DesignPanels/LayersPanel";
 import FillPanel from "../../reusable/Panels/DesignPanels/FillPanel";
 import StrokePanel from "../../reusable/Panels/DesignPanels/StrokePanel";
 import EffectsPanel from "../../reusable/Panels/DesignPanels/EffectsPanel";
+import ExportPanel from "../../reusable/Panels/DesignPanels/ExportPanel";
 
 const EditorRightSideBar: FC = () => (
   <div className="editor-right-side-bar">
@@ -24,6 +25,7 @@ const EditorRightSideBar: FC = () => (
         <FillPanel />
         <StrokePanel />
         <EffectsPanel/>
+        <ExportPanel />
       </Tab>
       <Tab>Tab2</Tab>
     </Tabs>

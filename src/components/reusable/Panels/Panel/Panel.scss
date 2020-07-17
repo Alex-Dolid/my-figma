@@ -23,7 +23,14 @@
   }
 
   &__top-buttons {
+    display: flex;
     margin-right: 20px;
+
+    .btn {
+      &:not(:last-child) {
+        margin-right: 5px;
+      }
+    }
   }
 
   &__title {
